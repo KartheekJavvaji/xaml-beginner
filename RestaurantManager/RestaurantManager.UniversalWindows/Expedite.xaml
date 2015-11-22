@@ -13,9 +13,21 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         
-        <TextBlock Text="**Clear all Orders**"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Grid.Row="1"/>
+        <Button Content="Clear all Orders"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="1"/>
+        <AppBar>
+            <AppBarButton Click="homeClick">
+                <StackPanel>
+                    <TextBlock FontFamily="Segoe MDL2 Assets" 
+                                       Text="&#xe10f;" 
+                                       FontSize="32"/>
+                    <TextBlock Margin="0,5,0,0" 
+                                       Text="HOME" 
+                                       FontSize="32"/>
+                </StackPanel>
+            </AppBarButton>
+        </AppBar>
     </Grid>
 </Page>

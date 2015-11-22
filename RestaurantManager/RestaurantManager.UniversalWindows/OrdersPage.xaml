@@ -29,15 +29,27 @@
                    Grid.Column="2"
                    Grid.Row="1"
                    VerticalAlignment="Center"/>
-        <TextBlock Text="**Clear all Orders**"
+        <Button Content="Add to Order"
                    Grid.Row="4"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
-        <TextBlock Text="**Submit Order"
+         <Button   Content="Submit Order"
                    Grid.Column="1"
                    Grid.ColumnSpan="2"
                    Grid.Row="4"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"/>
+        <AppBar Grid.ColumnSpan="3" Height="50">
+            <AppBarButton Click="homeClick">
+                <StackPanel >
+                    <TextBlock FontFamily="Segoe MDL2 Assets" 
+                                       Text="&#xe10f;" 
+                                       FontSize="32"/>
+                    <TextBlock Margin="0,5,0,0" 
+                                       Text="HOME" 
+                                       FontSize="32"/>
+                </StackPanel>
+            </AppBarButton>
+        </AppBar>
     </Grid>
 </Page>
