@@ -96,6 +96,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataManager.cs" />
     <Compile Include="Expedite.xaml.cs">
       <DependentUpon>Expedite.xaml</DependentUpon>
     </Compile>
@@ -106,6 +107,9 @@
       <DependentUpon>OrdersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="winrt.xaml.cs">
+      <DependentUpon>winrt.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -140,6 +144,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="OrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winrt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -28,7 +28,8 @@
                    Grid.ColumnSpan="2"
                    FontSize="22"
                    VerticalAlignment="Bottom"/>
-        
+        <Button Content="winrt"
+                Click="Button_Click"/>
         <Button  Content="Go To Orders View"
                  Grid.Row="2"
                  FontSize="28"
