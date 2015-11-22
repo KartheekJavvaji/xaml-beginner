@@ -5,9 +5,10 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <local:App x:Key="DataManager"/>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
@@ -31,22 +32,37 @@
                    Grid.Row="1"
                    VerticalAlignment="Center"/>
         <Button Content="Add to Order"
-                   Grid.Row="4"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
-         <Button   Content="Submit Order"
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
-                   Grid.Row="4"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
-        <ListView Grid.Row="1" Grid.RowSpan="3" Background="#FF13913B">
+                Grid.Row="4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="addToOrder"/>
+        <Button Content="Submit Order"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Grid.Row="4"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Click="submitOrder"/>
+        <TextBlock x:Name="test" 
+                   Grid.Row="0" 
+                   VerticalAlignment="Center" 
+                   TextWrapping="Wrap" 
+                   Grid.ColumnSpan="3"/>
+        <ListView SelectionMode="Multiple" 
+                  x:Name="MenuList" 
+                  Grid.Row="1" 
+                  Grid.RowSpan="3" 
+                  Background="#FF13913B" 
+                  ItemsSource="{Binding MenuItems}"/>
 
-        </ListView>
-        <ListView Grid.Column="2" 
-                  Grid.Row="2" Grid.RowSpan="2" Background="#FF1FB9B9">
-            
-        </ListView>
+        <ListView x:Name="OrderList"
+                  Grid.Column="2" 
+                  Grid.Row="2" 
+                  Grid.RowSpan="2" 
+                  Background="#FF1FB9B9" 
+                  ItemsSource="{Binding CurrentlySelectedMenuItems}"/>
+
+
         <CommandBar Grid.ColumnSpan="3"  >
             <AppBarButton Icon="Home" Label="Home" Click="homeClick"/>
         </CommandBar>

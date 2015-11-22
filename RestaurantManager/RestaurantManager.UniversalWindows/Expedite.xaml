@@ -6,19 +6,33 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.Resources>
+        <local:App x:Key="DataManager" />
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <GridView Background="#FF312153">
-            
+        <GridView Margin="15,0,0,0"  Grid.Row="1" Background="#FF312153" ItemsSource="{Binding OrderItems}">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Padding="5">
+                        <TextBlock Text="ORDER"
+                                   HorizontalAlignment="Center"
+                                   Foreground="White"/>
+                        <TextBlock Text="{Binding}"
+                                   Foreground="White"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
         </GridView>
         <Button Content="Clear all Orders"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Grid.Row="1"/>
+                Grid.Row="2"
+                Click="clearAllOrdersClick"/>
         <CommandBar>
             <AppBarButton Icon="Home" Label="Home" Click="homeClick"/>
         </CommandBar>

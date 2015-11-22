@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using RestaurantManager.UniversalWindows.RestaurantManager.Models;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -35,11 +36,6 @@ namespace RestaurantManager.UniversalWindows
         private void submitOrdersCLick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(OrdersPage));
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(winrt));
         }
     }
 }

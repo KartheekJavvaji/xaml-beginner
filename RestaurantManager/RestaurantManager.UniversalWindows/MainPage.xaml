@@ -26,13 +26,10 @@
                    Grid.Row="1"
                    HorizontalAlignment="Center"
                    Grid.ColumnSpan="2"
-                   FontSize="22"
+                   FontSize="18"
                    VerticalAlignment="Bottom"/>
-        <Button Content="winrt"
-                Click="Button_Click"/>
         <Button  Content="Go To Orders View"
                  Grid.Row="2"
-                 FontSize="28"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Center"
                  Click="goToOrdersClick"/>
@@ -40,7 +37,6 @@
         <Button  Content="Submit Order"
                  Grid.Column="1"
                  Grid.Row="2"
-                 FontSize="28"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Center"
                  Click="submitOrdersCLick"/>
