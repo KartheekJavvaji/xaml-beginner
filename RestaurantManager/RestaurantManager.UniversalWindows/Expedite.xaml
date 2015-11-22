@@ -5,25 +5,21 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data="using:RestaurantManager.Models"
     mc:Ignorable="d">
-    <Page.Resources>
-        <data:DataManager  x:Key="DataManager"/>
-    </Page.Resources>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{StaticResource DataManager}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <GridView Margin="15,0,0,0"  Grid.Row="1" Background="#FF312153" ItemsSource="{Binding OrderList}">
+        <GridView Margin="15,0,0,0"  Grid.Row="1" Background="#FF312153" ItemsSource="{Binding OrderItems}">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Padding="5">
                         <TextBlock Text="ORDER"
                                    HorizontalAlignment="Center"
                                    Foreground="White"/>
-                        <TextBlock Text="{Binding}"
+                        <TextBlock Text="{Binding }"
                                    Foreground="White"/>
                     </StackPanel>
                 </DataTemplate>
