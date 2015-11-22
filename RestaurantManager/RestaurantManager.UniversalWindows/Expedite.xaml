@@ -12,22 +12,15 @@
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        
+        <GridView Background="#FF312153">
+            
+        </GridView>
         <Button Content="Clear all Orders"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Grid.Row="1"/>
-        <AppBar>
-            <AppBarButton Click="homeClick">
-                <StackPanel>
-                    <TextBlock FontFamily="Segoe MDL2 Assets" 
-                                       Text="&#xe10f;" 
-                                       FontSize="32"/>
-                    <TextBlock Margin="0,5,0,0" 
-                                       Text="HOME" 
-                                       FontSize="32"/>
-                </StackPanel>
-            </AppBarButton>
-        </AppBar>
+        <CommandBar>
+            <AppBarButton Icon="Home" Label="Home" Click="homeClick"/>
+        </CommandBar>
     </Grid>
 </Page>
