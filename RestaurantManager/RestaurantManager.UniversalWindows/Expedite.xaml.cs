@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using RestaurantManager.Models;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -35,8 +36,9 @@ namespace RestaurantManager.UniversalWindows
 
         private void clearAllOrdersClick(object sender, RoutedEventArgs e)
         {
-            DataManager d = (DataManager)DataContext;
-            d.OrderItems.Clear();
+            
+            orderList.ItemsSource = null;
+                       
         }
     }
 }

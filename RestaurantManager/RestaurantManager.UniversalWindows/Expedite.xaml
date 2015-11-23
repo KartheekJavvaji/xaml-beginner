@@ -6,13 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{StaticResource DataManager}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="9*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <GridView Margin="15,0,0,0"  Grid.Row="1" Background="#FF312153" ItemsSource="{Binding OrderItems}">
+        <GridView x:Name="orderList" Margin="15,0,0,0"  Grid.Row="1" Background="#FF312153" ItemsSource="{Binding OrderItems, Source={StaticResource DataManager}}">
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Padding="5">
@@ -25,6 +25,7 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
+        <TextBlock Grid.Row="2" x:Name="ms"/>
         <Button Content="Clear all Orders"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"

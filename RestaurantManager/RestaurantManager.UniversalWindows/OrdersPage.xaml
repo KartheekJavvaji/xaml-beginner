@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
     mc:Ignorable="d">
     
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{StaticResource DataManager}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="1*"/>
@@ -51,14 +51,14 @@
                   Grid.Row="1" 
                   Grid.RowSpan="3" 
                   Background="#FF13913B" 
-                  ItemsSource="{Binding MenuItems}"/>
+                  ItemsSource="{Binding MenuItems, Source={StaticResource DataManager}}"/>
 
         <ListView x:Name="OrderList"
                   Grid.Column="2" 
                   Grid.Row="2" 
                   Grid.RowSpan="2" 
                   Background="#FF1FB9B9" 
-                  ItemsSource="{Binding CurrentlySelectedMenuItems}"/>
+                  ItemsSource="{Binding CurrentlySelectedMenuItems, Source={StaticResource DataManager}}"/>
 
 
         <CommandBar Grid.ColumnSpan="3"  >

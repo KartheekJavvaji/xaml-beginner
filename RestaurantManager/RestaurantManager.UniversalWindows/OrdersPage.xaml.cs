@@ -36,24 +36,24 @@ namespace RestaurantManager.UniversalWindows
 
         private void addToOrder(object sender, RoutedEventArgs e)
         {
-            DataManager d = (DataManager)DataContext;
-            var obj = MenuList.SelectedItems.ToArray();
+        //    DataManager d = (DataManager)DataContext;
+        //    var obj = MenuList.SelectedItems.ToArray();
 
-            foreach (var item in obj)
-            {
-                d.CurrentlySelectedMenuItems.Add(item.ToString());
-            }
+        //    foreach (var item in obj)
+        //    {
+        //        d.CurrentlySelectedMenuItems.Add(item.ToString());
+        //    }
         }
 
         private void submitOrder(object sender, RoutedEventArgs e)
         {
 
-            DataManager d = (DataManager)DataContext;
-            var obj = OrderList.Items.ToArray();
-            string r = string.Join(",", obj);
-            r = "Your order of \""+ r +"\" is been added";
-            d.OrderItems.Add(r);
-            test.Text = r;
+            //DataManager d = (DataManager)DataContext;
+            //var obj = OrderList.Items.ToArray();
+            //string r = string.Join(",", obj);
+            //r = "Your order of \""+ r +"\" is been added";
+            //d.OrderItems.Add(r);
+            //test.Text = r;
         }
     }
 }
